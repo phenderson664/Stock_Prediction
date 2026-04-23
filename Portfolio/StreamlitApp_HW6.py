@@ -168,7 +168,7 @@ if submitted:
     # input_df = pd.concat([base_df, pd.DataFrame([data_row], columns=base_df.columns)])
     input_df = pd.DataFrame([data_row], columns=MODEL_INFO["keys"])
 
-    input_df=json.dumps(user_inputs)
+    #input_df=json.dumps(user_inputs)
     res, status = call_model_api(input_df)
     if status == 200:
         st.metric("Prediction Result", res)
